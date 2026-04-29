@@ -1,0 +1,18 @@
+
+services:
+  app:
+    build: ./server
+    container_name: sse-sports-app
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - CLIENT_BUFFER_SIZE=50
+      - HEARTBEAT_INTERVAL=15000
+      - EVENT_INTERVAL=2000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/stats"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s

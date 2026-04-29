@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.top-bar {
+  margin-bottom: 30px;
+}
+
+#connection-status {
+  margin: 10px 0;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#connection-status[data-status="connected"] {
+  background: #d4edda;
+}
+
+#connection-status[data-status="disconnected"] {
+  background: #f8d7da;
+}
+
+#connection-status[data-status="reconnecting"] {
+  background: #fff3cd;
+}
+
+#scoreboard {
+  display: grid;
+  gap: 20px;
+}
+
+.scorecard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.team-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.flash {
+  animation: flashAnim 0.8s ease;
+}
+
+@keyframes flashAnim {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
