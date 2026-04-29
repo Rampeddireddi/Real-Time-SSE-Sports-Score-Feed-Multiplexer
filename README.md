@@ -174,8 +174,9 @@ K --> L
 
 L --> M[Live Scoreboard UI]
 
-H --> N[/stats Endpoint]
-E --> O[/events SSE Endpoint]
+H --> N["/stats Endpoint"]
+E --> O["/events SSE Endpoint"]
+
 ```
 
 ---
